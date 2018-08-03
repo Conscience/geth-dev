@@ -1,5 +1,7 @@
 # Local Ethereum Network
-A set of Docker images to create a local Ethereum network with three nodes and a monitor. This was built to understand how local Ethereum networks have to be set up and to provide a local test environment. **Never use this in a productive environment, as the docker-compose.yml contains hardcoded passwords and private keys for convenience** 
+A set of Docker images to create a local Ethereum network with three nodes and a monitor. This was built to understand how local Ethereum networks have to be set up and to provide a local test environment. 
+TODO: 
+- remove hardcoded passwords/private keys from docker-compose.yml
 
 ## Usage
 Setting up this networks requires you to install Docker. Clone the repository, and run `docker-compose up` from the repository root. The network should start and synchronize without any further configuration. It is using the Clique protocol (Proof-of-Authority), so the network runs very efficiently and does not use a lot of energy.
