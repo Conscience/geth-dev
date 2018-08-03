@@ -15,16 +15,16 @@ RUN rm $binary
 ADD ./genesis.json ./genesis.json
 RUN ./geth init genesis.json
 
-ARG password
-ARG privatekey
-RUN echo $password > ~/.accountpassword
-RUN echo $privatekey > ~/.privatekey
-RUN ./geth account import --password ~/.accountpassword  ~/.privatekey
+#ARG password
+#ARG privatekey
+#RUN echo $password > ~/.accountpassword
+#RUN echo $privatekey > ~/.privatekey
+#RUN ./geth account import --password ~/.accountpassword  ~/.privatekey
 
 ENV address=""
 ENV bootnodeId=""
 ENV bootnodeIp=""
-CMD exec ./geth --bootnodes "enode://$bootnodeId@$bootnodeIp:30301" --networkid="500" --verbosity=4 --rpc --rpcaddr "0.0.0.0" --rpccorsdomain "*" --etherbase $address --unlock $address --password ~/.accountpassword
+CMD exec ./geth --bootnodes "enode://$bootnodeId@$bootnodeIp:30301" --networkid="500" --verbosity=4 --rpc --rpcaddr "0.0.0.0" --rpccorsdomain "*" --etherbase $address 
 
 EXPOSE 8545
 EXPOSE 30303
