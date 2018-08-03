@@ -1,6 +1,7 @@
 # Local Ethereum Network
 A set of Docker images to create a local Ethereum network with three nodes and a monitor. This was built to understand how local Ethereum networks have to be set up and to provide a local test environment. 
-TODO: 
+
+## TODO 
 - remove hardcoded passwords/private keys from docker-compose.yml
 
 ## Usage
